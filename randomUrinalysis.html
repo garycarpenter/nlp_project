@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  	<title>random urinalysis</title>
+  	<link href="style.css" rel="stylesheet" />
+</head>
+
+
+<!-- This code is supposed to work with an array of names
+and randomly select a predetermined number of names.
+-->
+<body>
+	<h1>Random Urinalysis</h1>
+  	<p><script>document.write(Date());</script></p>
+	<p>Today's lucky winner:</p>
+	<script>
+		var i = 0;
+		var textArrayRoster = [
+			'Jonathan Neumann',
+			'Dean Huskey',
+			'Josh Linn',
+			'Luke Hannon',
+			'Michael McCray',
+			'Frank Keller',
+			'Marty Hogan',
+			'Joe Borling',
+			'Joel Hernandez',
+			'Matthew Spears',
+			'Joshua Mason',
+			'Tony Costello',
+			'Dakota Surovchak',
+			'Xavien Davis',
+			'Thomas Bryant',
+			'Fernando Valenzuela',
+			'Cary Cawley',
+		];
+		
+		while (i<5) {
+		var randomNumber = Math.floor(Math.random()*textArrayRoster.length);
+		
+		document.write(textArrayRoster[randomNumber] + '<br>');
+		textArrayRoster.splice(randomNumber,1);
+		i++;
+	}	
+		
+  	</script>
+</body>
+</html>
